@@ -1,0 +1,24 @@
+welcome: |
+          Welcome to DC Shelters, I found {{shelters_n}} shelters in Washington DC.
+
+          To repeat the information about the shelter just say repeat, and to
+          hear another shelter just say next.
+          Are you ready to start?
+
+welcome_no: |
+
+        Welcome to DC Shelters, sorry I haven't found any shelter.
+
+
+shelter_info: |
+
+          {{sh_name}} is located in {{sh_address}}, that's {{sh_address}}.
+          Ages accepted in this location is, {{sh_ages}}.
+
+          Repeat or next?
+
+close_session: |
+
+        <speak>
+          <audio src='https://s3.amazonaws.com/voicesummit-alexa-skill/audio/audio_closing_new-e.mp3'/>
+        </speak>

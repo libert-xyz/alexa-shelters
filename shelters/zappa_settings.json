@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "app_function": "skill.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "alexa-shelters",
+        "runtime": "python2.7",
+        "s3_bucket": "awdit-alexa-skill",
+        "apigateway_description" : "alexa shelters",
+        "lambda_description" : "alexa shelters"
+    }
+}
