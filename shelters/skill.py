@@ -41,7 +41,7 @@ def launch():
     shelter_id_list = range(0,shelter_count)
     session.attributes['shelter_id_list'] = shelter_id_list
 
-    session.attributes['shelter_id'] = session.attributes['shelter_id_list'].pop(random.choice(shelter_id_list))
+    session.attributes['shelter_id'] = session.attributes['shelter_id_list'].pop(session.attributes['shelter_id_list'].index(random.choice(shelter_id_list)))
 
     welcome_q = render_template('welcome',shelters_n=shelter_count)
 
@@ -54,7 +54,7 @@ def launch():
 
 @ask.intent('AMAZON.YesIntent')
 def yes_fn():
-    
+
     if session.attributes['number_of_shelter'] != 0:
         sh = session.attributes['shelters']['features'][(session.attributes['shelter_id'])]
 
@@ -70,7 +70,7 @@ def yes_fn():
 
 
         #Update Global Variables
-        session.attributes['shelter_id'] = session.attributes['shelter_id_list'].pop(random.choice(session.attributes['shelter_id_list']))
+        session.attributes['shelter_id'] = session.attributes['shelter_id_list'].pop(session.attributes['shelter_id_list'].index(random.choice(shelter_id_list)))
         session.attributes['number_of_shelter'] = session.attributes['number_of_shelter'] - 1
 
 
